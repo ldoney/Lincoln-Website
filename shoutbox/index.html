@@ -1,0 +1,29 @@
+<html>
+	<head>
+		<script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/typeit@v6/dist/typeit.min.js"></script>
+		<script src="https://rawgit.com/leizongmin/js-xss/master/dist/xss.js"></script>
+		<script src="connection.js"></script>
+		<script src="shoutbox.js"></script>
+		<link rel="stylesheet" type="text/css" href="/style.css">
+		<link rel="stylesheet" type="text/css" href="/css/typewrite.css">
+		<link rel="stylesheet" type="text/css" href="shoutbox.css">
+		<title>Shoutbox!</title>
+	</head>
+	<body>
+		<div id="unloadedwrapper">
+			<h1 id="prompt"></h1>
+			<input id="name-input" type="text">
+		</div>
+		<div id="loadedwrapper">
+			<h1 id="welcomediv">Welcome to the Shoutbox</h1>
+			<div id="messagediv"></div>
+			<div id="inputdiv">
+				<h3>Enter your Message: <input id="input-box" type="text"></h3>
+			</div>
+			<div id="loading"><h3 id="loadingdisp" style="display:none"></h3></div>
+		</div>
+		<div id="backdiv"></div>
+	</body>
+</html>

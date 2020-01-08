@@ -1,0 +1,16 @@
+<html>
+	<head>
+		<script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/typeit@v6/dist/typeit.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" type="text/css" href="css/typewrite.css">
+		<title>Login...</title>
+		<script>
+		</script>
+	</head>
+	<body>
+		<p id="sshdiv"><span class="greenspan">notlincoln@computer</span><span class="bluespan">:~$</span><span id="ssh"></span></p>
+		<div id="backdiv"></div>
+	</body>
+</html>

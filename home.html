@@ -1,0 +1,108 @@
+<html>
+<head>
+	<script src="js/styling.js"></script>
+	<script src="js/contentdiv.js"></script>
+	<script>
+	var http = new XMLHttpRequest();
+	var url = 'php/counter.php';
+	var params = '';
+	http.open('GET', url, true);
+
+	http.onreadystatechange = function() {//Call a function when the state changes.
+	    if(http.readyState == 4 && http.status == 200) {
+		document.getElementById("hits").innerHTML = http.responseText;
+	    }
+	}
+	http.send(params);
+
+	</script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<title>Home</title>
+</head>
+<body>
+	<div class="header">
+		<div class="version">
+			GNU nano 2.7.4
+		</div>
+		<div class="file">
+			File: Lincoln Doney
+		</div>
+	</div>
+	<div class="content">
+		<h1>Welcome to Lincoln's website!</h1>
+		<h2>Unique visitors: <span id="hits"></span></h2>
+		<h2>Links:</h2>
+			<h3><a href="https://novoresume.com/a/lincolndoney.1"><span class="bluespan">Resume</span></a></h3>
+			<h3><a href="https://github.com/ldoney"><span class="bluespan">Github</span></a></h3>
+		<br>
+		<div class="content-div">
+			<div class="content-navbar">
+				<div><h3>Info</h3></div>
+				<div><h3>Projects</h3></div>
+				<div><h3>Secret</h3></div>
+			</div>
+			<div class="content-body">
+				<div class="selected"></div>
+				<div>
+					<h2>Info:</h2>
+						<h3>Name: Lincoln V. Doney</h3>
+						<h3>Phone: (410)725-7306</h3>
+						<h3>E-Mail: lincolndoney@outlook.com</h3>
+					<h2>Education:</h2>
+						<h3>School: South River High School</h3>
+						<h3>Intended Major: Computer Engineering</h3>
+						<h3>STEM Pathways: Computer Science and PLTW</h3>
+				</div>
+				<div>
+					<h2>Warning: This Game is Hard</h2>
+					<h3>-This is a Mobile App I created using Cocos Creator for fun which has been published to the Google Play Store</h3>
+					<h3>Links:</h3>
+					<br>
+
+					<h2>Cafe at Maryland Hall App</h2>
+					<h3>-I created this for an internship, which is yet to be published. It is a mobile ordering service</h3>
+					<h3>Links:</h3>
+					<br>
+					
+					<h2>CRAB Radio Podcast App</h2>
+					<h3>-A podcasting app for CRAB Radio which is currently in progress</h3>
+					<h3></h3>
+					<br>
+
+					<h2>Annoying Bot</h2>
+					<h3>-Another one of my youtube projects, its just a bot that annoys you when it detects your face</h3>
+					<h3></h3>
+					<br>
+
+					<h2>Brain F$!# Interpreter
+					<h3>-An interpreter for the language Brain F*!# to run or analyze code written in that language</h3>
+					<h3>Links:</h3>
+					<br>
+
+					<h2>Project PANOPTES South River</h2>
+					<h3>-Exoplanet Hunting Telescope</h3>
+					<h3>IN PROGRESS</h3>
+					<br>
+
+				</div>
+				<div>Nothing to see here</div>
+			</div>
+		</div>
+	</div>
+	<footer>
+		<div id="line-count"><div>[ Read 76 lines ]</div></div>
+		<div id="commands-list">
+			<table>
+				<tr id="commands-top">
+				</tr>
+				<tr id="commands-btm">
+				</tr>
+			</table>
+		</div>
+	</footer>
+	<div id="backdiv"></div>
+
+</body>
+</html>
+

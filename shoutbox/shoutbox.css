@@ -1,0 +1,50 @@
+body {
+	-ms-overflow-style:none;
+	scrollbar-width:none;
+}
+body::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+}
+
+#messagediv {
+	overflow-y:scroll;
+	height:88%;
+	-ms-overflow-style: none;  /* Internet Explorer 10+ */
+    	scrollbar-width: none;  /* Firefox */
+}
+#messagediv::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+}
+#messagediv p {
+	margin:0px;
+}
+body {
+	cursor:text;
+	color:white;
+}
+#inputdiv {
+	width:100%;
+	overflow:hidden;
+}
+#inputdiv h3 {
+	color:white;
+	margin-left:0px;
+	display:block;
+}
+input[type=text] {
+	background-color:transparent;
+	border:0px transparent;
+	color:white;
+	text-shadow: 0 0 var(--shadow-intensity) var(--text-color);
+	font-family:'Inconsolata',monospace;
+	font-size:inherit;
+	width:800px;
+}
+#inputdiv input[type=text] {
+}
+#loadedwrapper {
+	display:none;
+}
+input[type=text]:focus {
+	outline:none;
+}
