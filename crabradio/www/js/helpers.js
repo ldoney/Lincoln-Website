@@ -37,3 +37,4 @@ function zoomOutMobile() {
     viewport.content = "width=1200";
   }
 }
+zoomOutMobile();
