@@ -10,10 +10,6 @@
 #name-display {
 	width:700px;
 }
-html {
-	width:20vw;
-	height:20vh;
-}
 #back {
 	text-align:left;
 }
@@ -101,9 +97,6 @@ html {
 #albums tr, #albums td{
 	border:3px solid black;
 	overflow:hidden;
-}
-html {
-	width:100vw;
 }
 #albums td {
 	text-align:center;
