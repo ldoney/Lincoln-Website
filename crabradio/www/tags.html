@@ -1,0 +1,38 @@
+<html>
+
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="js/helpers.js"></script>
+	<script src="js/retrievepods.js"></script>
+	<script src="js/catman.js"></script>
+	<style>
+		td {
+			padding: 0;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>Tag management page</h1>
+	<h2>Add new tag:</h2>
+	<form name="addNew" action="addnew.php" onsubmit="return validateForm()" method="post">
+		Name: <input type="text" name="name" required>
+		Image: <input type="text" name="imgurl" required>
+		<input type="hidden" name="intent" value="add">
+		<input type="submit" value="Submit">
+	</form>
+	<h2>Delete tag</h2>
+	<form name="rem" action="addnew.php" onsubmit="return confirm('Are you sure you want to delete?')" method="post">
+		Name to Delete:<input type="text" name="name" required>
+		<input type="hidden" name="intent" value="rm">
+		<input type="submit" value="Submit">
+	</form>
+	<table border="1">
+		<tr>
+			<th>Tag</th>
+			<th>Image</th>
+			<th>Items</th>
+		</tr>
+	</table>
+</body>
+</html>

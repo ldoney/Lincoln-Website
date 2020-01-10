@@ -1,0 +1,210 @@
+:root {
+	font-family:Arial;
+	--crab-bg: #E9E79A;
+	--crab-fg: #9DB2D0;
+}
+#time-cntrls {
+	width:100%;
+	vertical-align:top;
+}
+#name-display {
+	width:700px;
+}
+#back {
+	text-align:left;
+}
+#back img{
+	height:100px;
+	width:100px;
+	margin:10px;
+}
+.title-display {
+	overflow:hidden;
+}
+.time-reading{
+	color:black;
+	font-size:30px;
+}
+#lower-controls {
+	width:100%;
+}
+#cur-title {
+	font-size:50px;
+	text-align:center;
+}
+.current {
+	text-align:left;
+	padding-left:10px;
+}
+.total {
+	text-align:right;
+	padding-right:10px;
+}
+#trckwrp {
+	overflow:scroll;
+}
+#controls {
+	vertical-align:bottom;
+	width:100%;
+	text-align:center;
+	position:fixed;
+	bottom:0;
+	background-color:white;
+}
+#pause img{
+	margin:auto;
+	width:150px;
+	height:150px;
+	vertical-align:bottom;
+}
+#sample {
+	display:none;
+}
+#sample img {
+	width:585px;
+	height:487px;
+	object-fit:cover;
+}
+#albums, #tracks {
+	width:100%;
+	padding:0;
+}
+#albums tr {
+	margin:0;
+	margin-bottom:10px;
+}
+#albums {
+	border-collapse: seperate;
+	border-spacing: 50px 50px;
+}
+#controls canvas
+{
+	width:100%;
+	height:20px;
+}
+.album-row canvas 
+{
+	width:100%;
+	height:30px;
+}
+#tracks {
+	border-collapse: seperate;
+	border-spacing: 0 25px;
+	margin:auto;
+	width:90%;
+	border:none;
+}
+#albums tr, #albums td{
+	border:3px solid black;
+	overflow:hidden;
+}
+html {
+	width:100vw;
+}
+#albums td {
+	text-align:center;
+	margin:0;
+	width:50vw;
+	height:50vw;
+	font-size:50px;
+	vertical-align:top;
+	border-radius: 30px;
+	box-shadow: 5px 5px 16px 5px #000000;
+	background-color:white;
+	overflow:hidden;
+}
+#albums td img {
+	border-bottom: 2px solid black;
+	width:585;
+	object-fit:cover;
+	height:485;
+}
+#albums td .title {
+	text-align:left;
+	vertical-align:top;
+	padding-left: 5px;
+}
+#wrapper {
+	margin:0;
+	padding:0;
+	width:100vw;
+	height:100%;
+}
+body {
+	margin:0;
+	padding:0;
+	background: rgba(0, 0, 0, 0) url("https://perfectvenue.eu/wp-content/uploads/2017/10/Torre-Visco38-400x800.jpg") no-repeat scroll center center / cover;
+	background-attachment: fixed;
+	display: flex;   
+}
+.right {
+}
+#tracks {
+	border-radius: 30px;
+}
+#tracks tbody {
+	border-radius: 30px;
+}
+.album-row-outer {
+	text-align:left;
+	width:100%;
+	background-color:white;
+	border-radius: 30px;
+	box-shadow: 5px 5px 16px 5px #000000;
+	height:150px;
+	font-size: 15px;
+	display:inline-block;
+}
+.album-row {
+	border:none;
+}
+.album-img {
+	border:none;
+}
+.album-img img {
+	width:160px !important;
+	height:160px !important;
+}
+.album-row h2 {
+}
+.album-row-outer {
+	text-align:left;
+	width:100%;
+	border:none;
+}
+.track-name {
+	text-align:left;
+	margin:10px;
+	font-size:40px;
+}
+.name-overlay {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+#name {
+	width:100vw;
+	border:0px;
+	text-shadow: 5px 5px #000000;
+	color:white;
+	text-align:center;
+	font-size: 250px;
+	margin:0px;
+}
+#name h1 {
+	font-size: 250px;
+	display:block;
+	margin:0px;
+}
+#name h2 {
+	font-size:100px;
+	margin:0px;
+}
+#name img {
+	width:200px;
+	height:200px;	
+	margin:0;
+	border-radius:50px;
+	box-shadow: 5px 5px 16px 5px #000000;
+}
