@@ -1,11 +1,15 @@
 
 :root {
-  --shadow-intensity: 5px;
+  --shadow-config: 0 0 5px;
   --text-color: #C8C8C8;
   --nano-color: #BBBBBB;
+  --dark-color: black;
+  --red-color: #FE79AD;
+  --green-color: #64AA59;
+  --blue-color: #534F80;
 }
 body {
-  text-shadow: 0 0 var(--shadow-intensity) var(--text-color);
+  text-shadow: var(--shadow-config) var(--text-color);
   background-color:black;
   background-image: radial-gradient(#00960020, black 120%);
   padding:0%;
@@ -28,10 +32,10 @@ body {
   justify-content:center;
 }
 #line-count div{
-  text-shadow: 0 0 var(--shadow-intensity) #000000;
-  box-shadow: 0 0 var(--shadow-intensity) var(--nano-color);
+  text-shadow: var(--shadow-config) #000000;
+  box-shadow: var(--shadow-config) var(--nano-color);
   background-color:var(--nano-color);
-  color:black;
+  color:var(--dark-color);
   text-align:center;
   display:table;
 }
@@ -51,8 +55,8 @@ h3 {
   display: flex;
   justify-content: flex-start;
   text-align:center;
-  text-shadow: 0 0 var(--shadow-intensity) #000000;  
-  box-shadow: 0 0 var(--shadow-intensity) var(--nano-color);
+  text-shadow: var(--shadow-config) #000000;  
+  box-shadow: var(--shadow-config) var(--nano-color);
 }
 .header .version {
   margin-left:2%;
@@ -89,17 +93,17 @@ footer {
   padding-top: 102px;
 }
 a, .bluespan { 
-	color:#534F80;
-	text-shadow: 0 0 5px #534F80;
+	color:var(--blue-color);
+	text-shadow: var(--shadow-config) var(--blue-color);
 	text-decoration:none;
 }
 .greenspan {
-	color:#64AA59;
-	text-shadow: 0 0 5px #64AA59;
+	color:var(--green-color);
+	text-shadow: var(--shadow-config) var(--green-color);
 }
 .redspan {
-	color:#FE79AD;
-	text-shadow: 0 0 5px #FE79AD;
+	color:var(--red-color);
+	text-shadow: var(--shadow-config) var(--red-color);
 }
 #commands-list {
   width:100%;
@@ -115,13 +119,13 @@ a, .bluespan {
 }
 #commands-list tr td {
   background-color:transparent;
-  color:white;
+  color:white;	
 }
 #commands-list tr td span {
-  background-color:#BBBBBB;
-  color:black;
-  text-shadow: 0 0 var(--shadow-intensity) #000000;
-  box-shadow: 0 0 var(--shadow-intensity) var(--nano-color);
+  background-color:var(--nano-color);
+  color:var(--dark-color);
+  text-shadow: var(--shadow-config) var(--dark-color);
+  box-shadow: var(--shadow-config) var(--nano-color);
 }
 .content-div {
   border-style:solid;
@@ -129,7 +133,7 @@ a, .bluespan {
   margin-left:10px;
   margin-right:10px;
   padding:0px;
-  box-shadow: 0 0 var(--shadow-intensity) var(--text-color), inset 0 0 var(--shadow-intensity) var(--text-color);  
+  box-shadow: var(--shadow-config) var(--text-color), var(--shadow-config) var(--text-color);  
 }
 ::-webkit-scrollbar {
     width: 0px;
@@ -141,8 +145,8 @@ a, .bluespan {
 .content-navbar div {
   background-color:transparent;
   color: var(--nano-color);
-  box-shadow: 0 0 var(--shadow-intensity) var(--text-color), inset 0 0 var(--shadow-intensity) var(--text-color);  
-  text-shadow: 0 0 var(--shadow-intensity) var(--nano-color);
+  box-shadow: var(--shadow-config) var(--text-color), inset var(--shadow-config) var(--text-color);  
+  text-shadow: var(--shadow-config) var(--nano-color);
   cursor: pointer;
   text-align:center;
   width: 100px;
@@ -156,9 +160,9 @@ a, .bluespan {
 }
 .content-navbar .checked {
   background-color:var(--nano-color);
-  color:black;
-  text-shadow: 0 0 var(--shadow-intensity) #000000;
-  box-shadow: 0 0 var(--shadow-intensity) var(--nano-color);  
+  color:var(--dark-color);
+  text-shadow: var(--shadow-config) #000000;
+  box-shadow: var(--shadow-config) var(--nano-color);  
 
 }
 .content-navbar {
@@ -168,7 +172,7 @@ a, .bluespan {
   margin:0px;
 }
 .content-body {
-  max-height:250px;
+  max-height:45%;
   overflow-y:scroll;
 }
 .content-body .selected{
