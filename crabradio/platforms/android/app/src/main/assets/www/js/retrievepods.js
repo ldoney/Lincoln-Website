@@ -21,37 +21,6 @@ function sortJSON(cats, json)
 		categories.push(cat);
 	}
 	sorted = categories;
-
-/*	for(var i = 0; i < json.length; i++)
-	{
-		var tagslist = json[i].tags;
-		for(var j = 0; j < tagslist.length; j++)
-		{
-			categories.push(tagslist[j]);
-		}
-	}
-	var scat = removeDupes(categories);
-	for(var i = 0; i < scat.length; i++)
-	{
-		var cat = {
-			"name":scat[i],
-			"background":"",
-			"items":[]
-		};
-		for(var j = 0; j < json.length; j++)
-		{
-			if(json[j].tags.includes(scat[i]))
-			{
-				cat.items.push(json[j]);
-			}
-			if(cat.background == "")
-			{
-				cat.background = json[i].imgurl;
-			}
-		}
-		sorted.push(cat)
-	}
-*/
 	return sorted;
 }
 

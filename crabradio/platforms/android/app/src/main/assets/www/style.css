@@ -10,10 +10,6 @@
 #name-display {
 	width:700px;
 }
-html {
-	width:20vw;
-	height:20vh;
-}
 #back {
 	text-align:left;
 }
@@ -102,9 +98,6 @@ html {
 	border:3px solid black;
 	overflow:hidden;
 }
-html {
-	width:100vw;
-}
 #albums td {
 	text-align:center;
 	margin:0;
@@ -131,15 +124,14 @@ html {
 #wrapper {
 	margin:0;
 	padding:0;
-	width:100vw;
 	height:100%;
 }
 body {
-	margin:0;
+/*	margin:0;
 	padding:0;
 	background: rgba(0, 0, 0, 0) url("https://perfectvenue.eu/wp-content/uploads/2017/10/Torre-Visco38-400x800.jpg") no-repeat scroll center center / cover;
 	background-attachment: fixed;
-	display: flex;   
+	display: flex;   */
 }
 .right {
 }

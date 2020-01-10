@@ -75,4 +75,5 @@ window.onload = (event) =>
 		}
 	}
 	getJsonArray(handleTags);
+	zoomOutMobile();
 }
