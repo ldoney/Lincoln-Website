@@ -10,6 +10,10 @@
 #name-display {
 	width:700px;
 }
+html {
+	width:20vw;
+	height:20vh;
+}
 #back {
 	text-align:left;
 }
