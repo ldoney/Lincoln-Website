@@ -149,7 +149,7 @@ a, .bluespan {
   text-shadow: var(--shadow-config) var(--nano-color);
   cursor: pointer;
   text-align:center;
-  width: 100px;
+  width: 125px;
   border: var(--nano-color) solid;
   display:inline-block;
   margin:0px;
