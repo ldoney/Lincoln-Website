@@ -25,7 +25,8 @@ window.onload = (event) =>
 			clone.style.display = "table-row";
 			clone.getElementsByClassName("album-img")[0].getElementsByTagName("img")[0].src = play_img;
 			var title = clone.getElementsByClassName("track-name")[0];
-			title.innerHTML = truncate(category.items[i].name);
+			clone.fullName = category.items[i].name;
+			title.innerHTML = truncate(clone.fullName);
 			clone.aud = category.items[i].audurl;
 			clone.onclick = function(e) {
 				onClick(e, this);
@@ -57,7 +58,7 @@ window.onload = (event) =>
 			setPauseDisp(el);
 			el.style.backgroundColor = SELECTED_COL;
 			document.getElementById("pause").getElementsByTagName("img")[0].src = pause_img;
-			document.getElementById("cur-title").innerHTML = el.getElementsByClassName("track-name")[0].innerHTML;
+			document.getElementById("cur-title").innerHTML = el.fullName;
 			a.onloadedmetadata = function() {
 				document.getElementById("time-cntrls").getElementsByClassName("total")[0].innerHTML = formatTime(a.duration);
 			        a.play();
@@ -68,6 +69,16 @@ window.onload = (event) =>
 		{
 			Pause();
 		}
+	}
+	function makeShift(el)
+	{
+		setInterval(function()
+		{
+			var text = el.getElementsByClassName("track-name")[0];
+			var curMargin = text.style.right;
+			curMargin++;
+			text.style.right = curMargin;
+		},100, el)
 	}
 	function setPauseDisp(el)
 	{
