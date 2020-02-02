@@ -3,6 +3,8 @@
 	--crab-bg: #E9E79A;
 	--crab-fg: #9DB2D0;
 }
+#sample-sorter {
+}
 #time-cntrls {
 	width:100%;
 	vertical-align:top;
@@ -129,7 +131,7 @@
 body {
 	margin:0;
 	padding:0;
-	background: rgba(0, 0, 0, 0) url("https://perfectvenue.eu/wp-content/uploads/2017/10/Torre-Visco38-400x800.jpg") no-repeat scroll center center / cover;
+	background:var(--crab-fg);
 	background-attachment: fixed;
 	display: flex;   
 }
@@ -183,16 +185,18 @@ body {
 	width:100vw;
 	border:0px;
 	text-shadow: 5px 5px #000000;
-	color:white;
+	color:var(--crab-bg);;
 	text-align:center;
 	font-size: 250px;
 	margin:0px;
+	display:inline-block;
 }
 #name h1 {
-	font-size: 250px;
+	font-size: 195px;
 	display:block;
 	margin:0px;
-	margin-left:15px;
+	margin-left:40px;
+	display:inline-block;
 }
 #name h2 {
 	font-size:100px;
@@ -204,4 +208,5 @@ body {
 	margin:0;
 	border-radius:50px;
 	box-shadow: 5px 5px 16px 5px #000000;
+	display:inline-block;
 }

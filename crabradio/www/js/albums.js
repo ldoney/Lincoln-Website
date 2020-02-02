@@ -5,6 +5,24 @@ window.onload = (event) =>
 {
 	document.getElementById("pause").getElementsByTagName("img")[0].src = play_img;
 	document.getElementById("back").getElementsByTagName("img")[0].onclick = function(){window.location.href = "index.html";};
+	function findDiff(str1, str2){
+	  let diff= "";
+	  str2.split('').forEach(function(val, i){
+	    if (val != str1.charAt(i))
+	      diff += val ;
+	  });
+	  return diff;
+	}
+	function isIn(arr, str){
+		for(var i = 0; i < arr.length; i++)
+		{
+			if(findDiff(arr[i].toLowerCase(), str.toLowerCase()).length < 2)
+			{
+				return true;
+			}
+		}
+		return false;
+	}
 	function handleTag(json)
 	{
 		var name = decodeURI(window.location.hash.substring(1));
@@ -16,6 +34,19 @@ window.onload = (event) =>
 		{
 			nameEl[0].getElementsByTagName("img")[0].src = category.background;
 		}
+		var grouptemp = {"name":"", "content":[]};
+		var groups = [];
+		var ungrouped = [];
+		var cattemp = document.getElementById("sample-sorter");
+		for(var i = 0; i < category.items.length; i++)
+		{
+			var nm = category.items[i].name;
+			var sub = category.items[i].name.split(":");
+			if(!isIn(groups, sub[0]))
+			{
+				groups.push(sub[0]);
+			}
+		}
 		var template = document.getElementById("sample");
 		var table = template.parentElement;
 		for(var i = 0; i < category.items.length; i++)
@@ -26,7 +57,7 @@ window.onload = (event) =>
 			clone.getElementsByClassName("album-img")[0].getElementsByTagName("img")[0].src = play_img;
 			var title = clone.getElementsByClassName("track-name")[0];
 			clone.fullName = category.items[i].name;
-			title.innerHTML = truncate(clone.fullName);
+			title.innerHTML = formatNames(truncate(clone.fullName.split(":")[1]));
 			clone.aud = category.items[i].audurl;
 			clone.onclick = function(e) {
 				onClick(e, this);
