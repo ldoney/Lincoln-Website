@@ -14,9 +14,12 @@
 		<div id="trckwrp">
 			<table id="tracks" border="1">
 				<tbody>
-					<tr id="sample-sorter">
+					<tr id="sample-sorter" class="album-row-outer">
 						<td>
-							<h2>NAME</h2>
+							<h2 style="margin:0px">NAME</h2>
+						</td>
+						<td class="sorter-status">
+							<img class="sorter-status-img" src="https://cdn.iconscout.com/icon/free/png-512/keyboard-arrow-down-1781999-1514199.png">
 						</td>
 					</tr>
 					<tr id="sample" class="album-row-outer">
@@ -35,7 +38,7 @@
 			<table id="time-cntrls">
 				<tr>
 					<td class="time-reading current">-9:99</td>
-					<td class="title-display"><marquee behavior="scroll" direction="left" id="cur-title">No track</marquee></td>
+					<td class="title-display"><div id="cur-title">NO TRACK</div></td>
 					<td class="time-reading total">9:99</td>
 				</tr>
 			</table>

@@ -1,39 +1,19 @@
-function createCORSRequest(method, url) {
-  var xhr = new XMLHttpRequest();
-  xhr.withCredentials = true;
-  if ("withCredentials" in xhr) {
-    xhr.open(method, url, true);
-  } else if (typeof XDomainRequest != "undefined") {
-    xhr = new XDomainRequest();
-    xhr.open(method, url);
-  } else {
-    xhr = null;
-  }
-  return xhr;
+function getHTML(url, cFunction) {
+  var xhttp;
+  xhttp=new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      cFunction(this.responseText);
+    }
+ };
+  xhttp.open("GET", url, true);
+  xhttp.send();
 }
-//if (!xhr) {
-//  throw new Error('CORS not supported');
-//}
-
-var getHTML = function ( url, callback ) {
-
-	// Feature detection
-	if ( !window.XMLHttpRequest ) return;
-
-	// Create new request
-	var xhr = createCORSRequest('GET', url);
-
-	// Setup callback
-	xhr.onload = function() {
-		if ( callback && typeof( callback ) === 'function' ) {
-			callback( this.responseXML );
-		}
-	}
-
-	// Get the HTML
-	xhr.responseType = 'document';
-	xhr.send();
-
-};
-getHTML("https://www.aacps.org/crabradio", console.log);
-console.log("Ouf");
+function toObject(s) {
+	var parser = new DOMParser()
+	var el = parser.parseFromString(s, "text/html");
+	var ul = el.getElementsByClassName("ui-articles")[2];
+	var li = el.getElementsByTagName("li");
+	console.log(li.innerHTML);
+}
+getHTML("aacps_test/5690", toObject);
