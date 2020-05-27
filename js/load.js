@@ -55,8 +55,10 @@ var ssh = new TypeIt('#ssh', {
 ssh.go();
 })
 function doc_keyUp(e) {
-    if (e.keyCode == 32) {
 	document.location.href = "home.html";
-    }
 }
+function doc_onClick(e) {
+	document.location.href = "home.html";
+}
+document.addEventListener('onclick', doc_onClick, false);
 document.addEventListener('keyup', doc_keyUp, false);

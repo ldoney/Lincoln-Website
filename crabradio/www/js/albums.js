@@ -71,9 +71,6 @@ window.onload = (event) =>
 			breaker.className = "breaker";
 			table.appendChild(breaker);
 		}
-		var breaker = document.createElement("hr");
- 		breaker.className = "breaker";
-		table.appendChild(breaker);
 		for(var i = 0; i < category.items.length; i++)
 		{
 			var clone = template.cloneNode();
@@ -243,7 +240,7 @@ window.onload = (event) =>
 		var time = a.currentTime;
 		current.innerHTML = formatTime(time);
 	}
-	const SELECTED_COL = "#CCCCCC";
+	const SELECTED_COL = "#DDDDDD";
 	document.getElementById("pause").getElementsByTagName("img")[0].onclick = Pause;
 	function Pause()
 	{
