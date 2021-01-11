@@ -1,0 +1,22 @@
+<html>
+	<head>
+		<script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/typeit@v6/dist/typeit.min.js"></script>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+<meta content="utf-8" http-equiv="encoding">
+
+		<link rel="stylesheet" type="text/css" href="../style.css">
+		<link rel="stylesheet" type="text/css" href="../css/typewrite.css">
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+		<script src="errcont.js"></script>
+		<title>ERROR</title>
+	</head>
+	<body>
+		<div class="error-div">
+			<h1 class="redspan error-text">Oops :(</h1>
+			<h2 class="redspan">Darn! One of the two of us made a mistake and an ERROR occured!</h2>
+		</div>
+		<div id="backdiv"></div>
+	</body>
+</html>
