@@ -61,14 +61,15 @@ function distanceBetweenElems(elem1, elem2) {
 }
 
 window.addEventListener("load", function () {
-  var body = document.getElementsByTagName("BODY")[0];
+  const body = $("body")[0];
   //00960040
   function setBckgrnd() {
-    var opacitymin = 8;
-    var opacitymax = 12;
-    var curopacity = opacitymin;
-    var up = true;
-    var timer = setInterval(function () {
+    const opacitymin = 8;
+    const opacitymax = 12;
+    let curopacity = opacitymin;
+    let up = true;
+
+    const timer = setInterval(function () {
       setOpacity(curopacity);
       if (curopacity < opacitymin) {
         up = true;
@@ -89,7 +90,7 @@ window.addEventListener("load", function () {
   setBckgrnd();
 
   window.onscroll = function () {
-    var header = document.getElementById("Header");
+    var header = ("#header");
 
     var sticky = header.offsetTop;
 

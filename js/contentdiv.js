@@ -1,17 +1,17 @@
 function main() {
-  var navbars = document.getElementsByClassName("content-div");
-  for (var i = 0; i < navbars.length; i++) {
+  const navbars = (".content-div");
+  for (let i = 0; i < navbars.length; i++) {
     handleNavbar(navbars[i]);
   }
 }
 function handleNavbar(navbar) {
-  var body = navbar.getElementsByClassName("content-body")[0];
-  var bodyDisplay = body.getElementsByClassName("selected")[0];
-  var headers = navbar
-    .getElementsByClassName("content-navbar")[0]
-    .getElementsByTagName("div");
-  var found = -1;
-  for (var i = 0; i < headers.length; i++) {
+  const body = $(".content-body")[0];
+  const bodyDisplay = $(".selected")[0];
+  const headers = $(".content-navbar")[0].getElementsByTagName("div");
+
+  let found = -1;
+
+  for (let i = 0; i < headers.length; i++) {
     if (headers[i].className == "checked") {
       found = i;
       break;
@@ -21,7 +21,7 @@ function handleNavbar(navbar) {
     headers[0].className = "checked";
     found = 0;
   }
-  for (var i = 0; i < headers.length; i++) {
+  for (let i = 0; i < headers.length; i++) {
     headers[i].contentSelectId = i;
     headers[i].onclick = function () {
       select(this);
@@ -36,11 +36,8 @@ function display(el, index) {
   ].innerHTML;
 }
 function select(el) {
-  var bar = el.parentElement;
-  var wrap = bar.parentElement;
-  var body = wrap.getElementsByClassName("content-body")[0];
-  display(body.getElementsByClassName("selected")[0], el.contentSelectId);
-  bar.getElementsByClassName("checked")[0].className = "";
+  display($(".selected")[0], el.contentSelectId);
+  $(".checked")[0].className = "";
   el.className = "checked";
 }
 window.onload = (event) => {

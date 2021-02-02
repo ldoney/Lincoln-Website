@@ -2,7 +2,7 @@ function main()
 {
 }
 
-window.onload = (event) => {
+$( (event) => {
  main();
-};
+});
 
