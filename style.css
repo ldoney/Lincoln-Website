@@ -217,7 +217,7 @@ a,
   margin: 0px;
 }
 .content-body {
-  max-height: 93%;
+  max-height: 84%;
   overflow-y: scroll;
   scrollbar-width: none;
 }
